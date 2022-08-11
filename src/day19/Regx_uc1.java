@@ -11,6 +11,8 @@ public class Regx_uc1 {
 		String firstname = sc.next();
 		System.out.println("Enter the last name");
 		String lastname = sc.next();
+		System.out.println("Enter the email id");
+		String email = sc.next();
 		/**
 		 * checking if the given name starts with capital letter and has min 3 letters
 		 */
@@ -19,10 +21,16 @@ public class Regx_uc1 {
 		 * checking if the given name starts with capital letter and has min 3 letters
 		 */
 		boolean result2 = Pattern.matches("[A-Z][a-z]{3,}", lastname);
+		
+		/**
+		 * Checking for the email id.
+		 */
+		boolean result3 = Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$",email);
 		/**
 		 * if two cases are true print valid else invalid
 		 */
-		if(result && result2) {
+		
+		if(result && result2 && result3) {
 			System.out.println("valid");
 		}
 		else {
