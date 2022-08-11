@@ -37,7 +37,7 @@ public class Regx_uc1 {
 		/**
 		 * checking password
 		 */
-		boolean result5 = Pattern.matches("^(?=.{8,}$)(?=.*?[A-Z]).*$",pass);
+		boolean result5 = Pattern.matches("^(?=.{8,}$)(?=.*?[a-z])(?=.*?[A-Z]).*$",pass);
 		if(result5) {
 			System.out.println("true");
 		}
